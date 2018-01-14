@@ -27,3 +27,9 @@ p{
 thead{
 	color: black;
 }
+
+.btn{
+	width: 10%;
+	position: relative;
+	margin: auto;
+}
