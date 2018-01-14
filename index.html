@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Train Scheduler</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-7ELRJF5/u1pkLd0W7K793Y7ZCb1ISE8FjEKiDAwHD3nSDbA2E9Txc423ovuNf1CV" crossorigin="anonymous"> 
+
+
+</head>
+<body>
+  <div class="jumbotron">
+  <h1 class="display-3">Train Scheduler</h1>
+  <p class="lead">Choo. Choo. Chee. Chee.</p>
+  </div>
+
+<div class="card text-white bg-warning mb-3" style="max-width: 75rem;">
+  <div class="card-header">Current Train Schedule</div>
+  <table class="table table-hover">  
+  <thead>
+    <tr>
+      <th scope="col">Train Name</th>
+      <th scope="col">Dsetination</th>
+      <th scope="col">Frequncy (min)</th>
+      <th scope="col">Next Arrival</th>
+      <th scope="col">Minutes Away</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<tr class="table-info">
+      <th scope="row">Info</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+   </tbody>
+</table>
+</div>
+
+<div class="card border-warning mb-3" style="max-width: 75rem;">
+  <div class="card-header">Add Train</div>
+  <div class="form-group">
+      <label for="trainNameInput">Train Name</label>
+      <input type="trainName" class="form-control" id="trainName" aria-describedby="emailHelp" placeholder="Train Name">
+    </div>
+    <div class="form-group">
+      <label for="destinationInput">Destination</label>
+      <input type="destination" class="form-control" id="destination" placeholder="Destination">
+    </div>
+    <div class="form-group">
+      <label for="trainTimeInput">First Train Time (HH:mm-military time)</label>
+      <input type="trainTime" class="form-control" id="trainTime" placeholder="HH:mm">
+    </div>
+    <div class="form-group">
+      <label for="frequencyInput">Frequency (min)</label>
+      <input type="frequency" class="form-control" id="frequency" placeholder="Frequency">
+    </div>
+</div>
+
+
+
+</body>
+</html>
