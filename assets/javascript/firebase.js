@@ -58,7 +58,7 @@ database.ref().on("child_added", function(childSnapshot){
 	// Store everything into a variable.
 	var name = childSnapshot.val().trainName;
 	var trainDestination = childSnapshot.val().destination;
-	var trainTime = childSnapshot.val().time;
+	var trainTime = childSnapshot.val().trainTime;
 	var trainFrequency = childSnapshot.val().frequency;
 
 	// train Info
@@ -68,8 +68,8 @@ database.ref().on("child_added", function(childSnapshot){
 	console.log(trainFrequency);
 
 	//user input
-	var tFrequency = trainTime;
-    var firstTime = trainFrequency;
+	var tFrequency = trainFrequency;
+    var firstTime = trainTime;
 
     // First Time (pushed back 1 year to make sure it comes before current time)
     var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
@@ -92,7 +92,7 @@ database.ref().on("child_added", function(childSnapshot){
     console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
     // Next Train
-    var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+    var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("HH:mm");
     console.log("ARRIVAL TIME: " + moment(nextTrain).format("HH:mm"));
 
     // Add each train's data into the table
